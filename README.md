@@ -3,6 +3,37 @@
 ## Overview
 In software development, Object-Oriented Design (OOD) plays a crucial role in writing flexible, scalable, maintainable, and reusable code. OOD is a paradigm that focuses on modeling software systems as a collection of objects that interact with each other to accomplish tasks. One of the key principles of OOD is the SOLID principle, introduced by Robert C. Martin, also known as Uncle Bob. The SOLID principle serves as a coding standard for good object-oriented design in programming, ensuring that software systems are well-structured, easy to understand, and maintainable over time.
 
+## Coupling in Software Engineering
+
+Coupling refers to the degree of interdependence between different parts of your code. It essentially describes how closely connected classes or methods are to each other.
+
+**High Coupling**
+
+* Tightly linked classes or methods that rely heavily on each other's internal workings. Changes in one class can ripple through and necessitate modifications in other parts, making the codebase fragile and difficult to maintain.
+
+**Low Coupling**
+
+* Loosely connected classes or methods that operate with minimal reliance on each other's internal details. Changes are more isolated, reducing the impact on other parts and improving maintainability.
+
+**Benefits of Low Coupling**
+
+* **Improved Maintainability:** Changes are easier to make and test in isolation.
+* **Enhanced Reusability:** Classes with well-defined responsibilities can be reused more effectively across different parts of the application.
+* **Increased Flexibility:** The codebase is more adaptable to future requirements and modifications.
+
+**The Single Responsibility Principle (SRP) and Coupling**
+
+The SRP promotes low coupling by encouraging the creation of classes and methods with focused responsibilities. This reduces the need for classes to be aware of or interact with intricate details of other classes.
+
+**Example**
+
+Consider two classes: `Order` and `PaymentProcessor`.
+
+* **High Coupling:** If the `Order` class directly handles payment processing logic (e.g., using credit card details), any changes to payment processing would require modifying the `Order` class as well. This creates a tight coupling.
+
+* **Low Coupling:** In a more decoupled approach, the `Order` class would simply communicate the order details to a separate `PaymentProcessor` class. This way, payment processing logic is encapsulated within the `PaymentProcessor`, and the `Order` class remains focused on managing order information.
+
+
 ## SOLID Principles Belong to OOD
 The SOLID principles are fundamental principles of Object-Oriented Design (OOD). They provide guidelines for designing software systems that are modular, flexible, and easy to maintain. Each SOLID principle addresses specific aspects of OOD, promoting best practices for creating software that is robust and scalable.
 
